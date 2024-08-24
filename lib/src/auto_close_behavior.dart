@@ -352,7 +352,6 @@ class _SlidableAutoCloseBarrierNotificationSenderState
   SlidableGroupNotificationDispatcher? dispatcher;
 
   void _handleStatusChanged(AnimationStatus status) {
-    //TODO(romain): There is a bug if more than one try to open at the same time.
     final willBarrierBeEnabled = status != AnimationStatus.dismissed;
     final barrierEnabled = dispatcher != null;
     if (willBarrierBeEnabled != barrierEnabled) {
